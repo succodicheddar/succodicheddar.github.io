@@ -1,17 +1,21 @@
 function coccolami() {
-  // Mostra testo
-  document.getElementById("sukkettoText").style.display = "block";
+  // Mostra testo e seconda immagine
+  document.getElementById("magiaText").style.display = "block";
+  document.getElementById("secondaFotoContainer").style.display = "block";
 
   // Cuori
-  for (let i = 0; i < 10; i++) {
+  const container = document.getElementById("cuoriContainer");
+  const width = container.offsetWidth;
+  const height = container.offsetHeight;
+
+  for (let i = 0; i < 15; i++) {
     const cuore = document.createElement("div");
     cuore.className = "cuore";
     cuore.innerHTML = "❤";
-    cuore.style.left = Math.random() * 200 - 100 + "px";
-    cuore.style.top = "0";
-    document.getElementById("cuoriContainer").appendChild(cuore);
+    cuore.style.left = Math.random() * width + "px";
+    cuore.style.top = Math.random() * height + "px";
+    container.appendChild(cuore);
 
-    // Rimuovi dopo l'animazione
     setTimeout(() => {
       cuore.remove();
     }, 2000);
