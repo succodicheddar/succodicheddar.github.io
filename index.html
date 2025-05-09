@@ -3,17 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sukketto Cat</title>
+  <title>Magia Nera</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1 id="sukkettoText">Sukketto</h1>
+  <h1 id="magiaText">Magia Nera</h1>
+
   <div class="container">
-    <img src="gatto.png" id="gatto" alt="Gatto pixelato" />
+    <div class="gatto-container">
+      <img src="gatto.png" id="gatto" alt="Gatto pixelato" />
+      <div id="cuoriContainer"></div>
+    </div>
     <button onclick="coccolami()">Coccolami</button>
-    <div id="cuoriContainer"></div>
   </div>
+
+  <div id="secondaFotoContainer">
+    <img src="seconda-foto.png" id="secondaFoto" alt="Seconda immagine" />
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
