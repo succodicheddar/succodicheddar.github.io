@@ -56,7 +56,30 @@ setTimeout(() => gatto.classList.remove("jump"), 400);
     cuore.style.left = Math.random() * width + "px";
     cuore.style.top = Math.random() * height + "px";
     container.appendChild(cuore);
+function coccolami() {
+  document.getElementById("magiaText").style.display = "block";
+  document.getElementById("secondaFotoContainer").style.display = "block";
 
+  lanciaCuori("cuoriContainer");   // Primo gatto
+  lanciaCuori("cuoriSeconda");     // Seconda immagine
+}
+
+function lanciaCuori(containerId) {
+  const container = document.getElementById(containerId);
+  const width = container.offsetWidth;
+  const height = container.offsetHeight;
+
+  for (let i = 0; i < 15; i++) {
+    const cuore = document.createElement("div");
+    cuore.className = "cuore";
+    cuore.innerHTML = "❤";
+    cuore.style.left = Math.random() * width + "px";
+    cuore.style.top = Math.random() * height + "px";
+    container.appendChild(cuore);
+
+    setTimeout(() => cuore.remove(), 2000);
+  }
+}
     setTimeout(() => {
       cuore.remove();
     }, 2000);
