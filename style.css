@@ -97,7 +97,15 @@ button:hover {
   border-radius: 50%;
   animation: sparkle 1s ease-out forwards;
 }
+.jump {
+  animation: jumpAnim 0.4s ease;
+}
 
+@keyframes jumpAnim {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
 @keyframes sparkle {
   0% { transform: scale(1); opacity: 1; }
   100% { transform: scale(2); opacity: 0; }
