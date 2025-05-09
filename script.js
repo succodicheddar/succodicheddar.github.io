@@ -13,6 +13,10 @@ function scintille() {
   setTimeout(() => sparkle.remove(), 1000);
 }
 setInterval(scintille, 1000);
+
+  const gatto = document.getElementById("gatto");
+gatto.classList.add("jump");
+setTimeout(() => gatto.classList.remove("jump"), 400);
   // Cuori
   const container = document.getElementById("cuoriContainer");
   const width = container.offsetWidth;
